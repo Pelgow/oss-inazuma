@@ -1,0 +1,29 @@
+{
+    "name": "pelgow/oss-inazuma",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "05pau\\OssInazuma\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pelgow",
+            "email": "paul.libon@edu.devinci.fr"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "symfony/dom-crawler": "^5.0||^6.3",
+        "symfony/css-selector": "^5.0||^6.3"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.6||^10.2"
+    },
+    "scripts": {
+        "phpstan": "@php vendor/bin/phpstan analyse src --level=max",
+        "test": "@php vendor/bin/phpunit tests"
+    }
+}
