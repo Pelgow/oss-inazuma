@@ -13,6 +13,10 @@ class Api
         $url = 'https://www.giantbomb.com/inazuma-eleven/3025-1280/characters/';
 
         $html = file_get_contents($url);
+        if ($html === false) {
+            return [];
+        }
+
         $crawler = new Crawler();
         $crawler->addHtmlContent($html);
 
