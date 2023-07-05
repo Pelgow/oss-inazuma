@@ -8,7 +8,7 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class Api
 {
-    public static function scrapeCharacters():  array | false
+    public static function scrapeCharacters():  array
     {
         $url = 'https://www.giantbomb.com/inazuma-eleven/3025-1280/characters/';
 
@@ -23,9 +23,9 @@ class Api
         $characterData = [];
 
         $crawler->filter('.editorial li')->each(function (Crawler $node) use (&$characterData) {
-            $name = $node->filter('h3.title')->text();
-            $image = $node->filter('img')->attr('src');
-            $description = $node->filter('p')->text();
+            $name = $node->filter('h3.title')->text() ?? '-';
+            $image = $node->filter('img')->attr('src') ?? '-';
+            $description = $node->filter('p')->text() ?? '-';
 
             $characterData[] = [
                 'name' => $name,
