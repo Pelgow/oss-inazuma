@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "05pau\\OssInazuma\\": "src/"
+            "pelgow\\OssInazuma\\": "src/"
         }
     },
     "authors": [

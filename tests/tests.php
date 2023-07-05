@@ -1,6 +1,6 @@
 <?php
 
-use  05pau\OssInazuma\Api;
+use pelgow\OssInazuma\Api;
 use PHPUnit\Framework\TestCase;
 
 class ApiTest extends TestCase

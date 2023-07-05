@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace 05pau\OssInazuma;
+namespace pelgow\OssInazuma;
 
 class Api
 {
