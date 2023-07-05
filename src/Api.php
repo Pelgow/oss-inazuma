@@ -8,10 +8,7 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class Api
 {
-    /**
-     * @return array
-     */
-    public static function scrapeCharacters(): array
+    public static function scrapeCharacters():  array | false
     {
         $url = 'https://www.giantbomb.com/inazuma-eleven/3025-1280/characters/';
 
