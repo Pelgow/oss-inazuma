@@ -1,6 +1,6 @@
 # oss-inazuma
 
-Pelgow exercices
+
 
 ## Installation
 
