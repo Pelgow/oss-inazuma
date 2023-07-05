@@ -1,17 +1,19 @@
 <?php
 
-use pelgow\OssInazuma\Api;
 use PHPUnit\Framework\TestCase;
+use pelgow\OssInazuma\Api;
 
 class ApiTest extends TestCase
 {
-    public function testGetRandomNumber()
+    public function testScrapingCharacters()
     {
-        $api = new Api();
-        $this->assertIsInt($api->getRandomNumber());
-        $this->assertGreaterThanOrEqual(0, $api->getRandomNumber());
-        $this->assertLessThanOrEqual(100, $api->getRandomNumber());
-        echo "\n";
-        echo "Random number: " . $api->getRandomNumber() . "\n";
+        $characters = Api::scrapeCharacters();
+        foreach ($characters as $character) {
+            echo "Nom : " . $character['name'] . "\n";
+            echo "Image : " . $character['image'] . "\n";
+            echo "Description : " . $character['description'] . "\n";
+            echo "\n";
+        }
+        $this->assertNotEmpty($characters);
     }
 }
