@@ -36,6 +36,7 @@ composer require --dev phpunit/phpunit
 ```
 
 To launch your application, run the following command:
+```bash
 php build/index.php
 ```
 To run the tests, use the following command:
